@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1><font color="#FCA205"><i>IT INFRA ADMIN HOME</i></font></h1>
+<p>Welcome to It Infra Admin Page, a website developed by <em>Cho Eun Ji</em>!</p>
+<h2>Admin Content</h2>
+<p>Push Message Current Status:</p>
+<ul>
+    <li><strong># Device Id:</strong> {{ num_deviceIds }}</li>
+    <li><strong># Firebase token:</strong> {{ num_firebaseTokens }}</li>
+    <li><strong># Message:</strong> {{ num_messages }}</li>
+    <li><strong># Authors:</strong> {{ num_authors }}</li>
+</ul>
+{% endblock %}
+
+
+<!-- https://developer.mozilla.org/ko/docs/Learn/Server-side/Django/Home_page -->

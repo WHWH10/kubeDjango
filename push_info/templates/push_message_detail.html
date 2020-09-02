@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Title: {{ pushDetail.message_title }}</h1>
+
+<p><strong>Author:</strong> <a href="">{{ pushDetail.author }}</a></p> <!-- author detail link not yet defined -->
+<p><strong>Content:</strong> {{ pushDetail.message_content }}</p>
+<p><strong>DeviceId:</strong> {{ pushDetail.device_id }}</p>
+<p><strong>Token:</strong> {{ pushDetail.firebase_token }}</p>
+<p><strong>Date:</strong> {{ pushDetail.create_date }}</p>
+{% endblock %}

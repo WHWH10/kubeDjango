@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from admin_user.views import index, logout, LoginView
+from push_info.views import PushListView, PushListDetailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', index),
+    path('login/', LoginView.as_view(), name='login'),
+    path('logout/', logout, name='logout'),
+    path('pushlist/', PushListView.as_view(), name='pushList'),
+    path('pushlist/<int:pk>', PushListDetailView.as_view(), name='pushDetail')
 ]

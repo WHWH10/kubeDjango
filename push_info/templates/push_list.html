@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h1>Push Message List</h1>
+{% if push_message_list %}
+<ul>
+    {% for push_message in push_message_list %}
+    <li>
+        <a href="{{ push_message.get_absolute_url }}">{{ push_message.message_title }}</a> ({{push_message.author}})
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>There are no push_message in the List.</p>
+{% endif %}
+{% endblock %}
